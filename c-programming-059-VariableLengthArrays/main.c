@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+#ifdef __STDC_NO_VLA__
+	printf("Variable length arrays are not supported.\n");
+	exit(1);
+#endif 
+
+
 void array(int size) {
 	char alpha[size];
 	int x = 0;
